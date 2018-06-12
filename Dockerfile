@@ -1,9 +1,9 @@
 FROM golang:1.10-stretch
 
-RUN mkdir -p /app
-COPY . /app/
-WORKDIR /app
+RUN mkdir -p /go/app
+COPY . /go/app/
+WORKDIR /go/app
 RUN go get ./...  
 RUN go build
 EXPOSE 6666
-CMD  /app/irc-slack
+CMD  /go/app/irc-slack
