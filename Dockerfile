@@ -1,4 +1,4 @@
-FROM 1.10-alpine
+FROM golang:1.10-alpine
 
 RUN mkdir -p /app
 COPY . /app/
